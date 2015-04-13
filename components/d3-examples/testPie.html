@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="d3pie.min.js"></script>
+    </head>
+    <body>
+
+        <!-- ###################################      SMALL PIE CHART      ################################### -->
+
+        <script>
+
+        // var data = [{'weight': 2, 'risk': 2}, {'weight': 5, 'risk': 2}, {'weight': 10, 'risk': 2}, {'weight': 4, 'risk': 3},
+        //             {'weight': 4, 'risk': 4}, {'weight': 5, 'risk': 1}, {'weight': 5, 'risk': 6}, {'weight': 4, 'risk': 6}];
+
+        // var width = 100,
+        //     height = 100,
+        //     outerRadius = height / 2 - 10,
+        //     innerRadius = 20,
+        //     cornerRadius = 3,
+        //     padAngle = .05;
+
+        // var pie = d3.layout.pie()
+        //     .padAngle(padAngle);
+
+        // var arcs = pie(data);
+
+        // var arc = d3.svg.arc()
+        //     .innerRadius(innerRadius)
+        //     .outerRadius(outerRadius)
+        //     .cornerRadius(cornerRadius);
+
+        // var color = d3.scale.category10();
+
+        // var svg = d3.select("body").append("svg")
+        //     .attr("width", width)
+        //     .attr("height", height)
+        //   .append("g")
+        //     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+        // svg.append("circle")
+        //     .style("fill", "none")
+        //     // .style("stroke", "#555")
+        //     .attr("r", innerRadius);
+
+        // svg.append("circle")
+        //     .style("fill", "none")
+        //     // .style("stroke", "#555")
+        //     .attr("r", outerRadius);
+
+        // svg.append("g")
+        //     // .style("stroke", "#555")
+        //     .style("fill", "none")
+        //     .attr("class", "corner")
+        //   .selectAll("circle")
+        //     .data(d3.merge(arcs.map(function(d) {
+        //       return [
+        //         {angle: d.startAngle + padAngle / 2, radius: outerRadius - cornerRadius, start: +1},
+        //         {angle:   d.endAngle - padAngle / 2, radius: outerRadius - cornerRadius, start: -1},
+        //         {angle:   d.endAngle - padAngle / 2 * outerRadius / innerRadius, radius: innerRadius + cornerRadius, start: -1},
+        //         {angle: d.startAngle + padAngle / 2 * outerRadius / innerRadius, radius: innerRadius + cornerRadius, start: +1}
+        //       ];
+        //     })))
+        //   .enter().append("circle")
+        //     .attr("cx", function(d) { return d.start * cornerRadius * Math.cos(d.angle) + Math.sqrt(d.radius * d.radius - cornerRadius * cornerRadius) * Math.sin(d.angle); })
+        //     .attr("cy", function(d) { return d.start * cornerRadius * Math.sin(d.angle) - Math.sqrt(d.radius * d.radius - cornerRadius * cornerRadius) * Math.cos(d.angle); })
+        //     .attr("r", cornerRadius);
+
+        // svg.append("g").selectAll("path")
+        //     .data(arcs)
+        //   .enter().append("path")
+        //     .style("fill", function(d, i) { return color(i); })
+        //     .style("fill-opacity", .65)
+        //     // .style("stroke", "#000")
+        //     .style("stroke-width", "1.5px")
+        //     .attr("d", arc);
+
+        </script>
+
+        <!-- ###################################      LARGE PIE CHART 1     ################################### -->
+
+        <script>
+
+        // var data = [{'weight': 2, 'risk': 2}, {'weight': 5, 'risk': 2}, {'weight': 10, 'risk': 2}, {'weight': 4, 'risk': 3},
+        //             {'weight': 4, 'risk': 4}, {'weight': 5, 'risk': 1}, {'weight': 5, 'risk': 6}, {'weight': 4, 'risk': 6}];
+
+        // var width = 500,
+        //     height = 500,
+        //     outerRadius = height / 2 - 10,
+        //     innerRadius = 200,
+        //     cornerRadius = 3,
+        //     padAngle = .03;
+
+        // var pie = d3.layout.pie()
+        //     .padAngle(padAngle)
+        //     .value(function(d) { return d.weight });
+
+        // var arcs = pie(data);
+
+        // var arc = d3.svg.arc()
+        //     .innerRadius(innerRadius)
+        //     .outerRadius(outerRadius)
+        //     .cornerRadius(cornerRadius);
+
+        // // var color = ['#BF4245', '#EC8373', '#F48E33', '#E9A76B', '#F3C9A3', '#F7EFE1'];
+        // var color = '#BF4245';
+        // var opacities = ['.2', '.3', '.4', '.5', '.6', '.7', '.8', '.9']
+
+        // var svg = d3.select("body").append("svg")
+        //     .attr("width", width)
+        //     .attr("height", height)
+        //   .append("g")
+        //     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+        // svg.append("circle")
+        //     .style("fill", "none")
+        //     // .style("stroke", "#555")
+        //     .attr("r", innerRadius);
+
+        // svg.append("circle")
+        //     .style("fill", "none")
+        //     // .style("stroke", "#555")
+        //     .attr("r", outerRadius);
+
+        // svg.append("g")
+        //     // .style("stroke", "#555")
+        //     .style("fill", "none")
+        //     .attr("class", "corner")
+        //   .selectAll("circle")
+        //     .data(d3.merge(arcs.map(function(d) {
+        //       return [
+        //         {angle: d.startAngle + padAngle / 2, radius: outerRadius - cornerRadius, start: +1},
+        //         {angle:   d.endAngle - padAngle / 2, radius: outerRadius - cornerRadius, start: -1},
+        //         {angle:   d.endAngle - padAngle / 2 * outerRadius / innerRadius, radius: innerRadius + cornerRadius, start: -1},
+        //         {angle: d.startAngle + padAngle / 2 * outerRadius / innerRadius, radius: innerRadius + cornerRadius, start: +1}
+        //       ];
+        //     })))
+        //   .enter().append("circle")
+        //     .attr("cx", function(d) { return d.start * cornerRadius * Math.cos(d.angle) + Math.sqrt(d.radius * d.radius - cornerRadius * cornerRadius) * Math.sin(d.angle); })
+        //     .attr("cy", function(d) { return d.start * cornerRadius * Math.sin(d.angle) - Math.sqrt(d.radius * d.radius - cornerRadius * cornerRadius) * Math.cos(d.angle); })
+        //     .attr("r", cornerRadius);
+
+        // svg.append("g").selectAll("path")
+        //     .data(arcs)
+        //   .enter().append("path")
+        //     // .style("fill", function(d, i) { console.log(d); return color[d.data.risk % color.length]})
+        //     .style("fill", color)
+        //     .style("fill-opacity", function(d, i) { return opacities[d.data.risk % opacities.length] })
+        //     // .style("stroke", "#000")
+        //     .style("stroke-width", "1.5px")
+        //     .attr("d", arc);
+
+        </script>
+
+        <!-- ###################################      RADIAL GRAPH      ################################### -->
+
+        <script charset="utf-8">
+            chartHeight = 700
+            chartWidth = 700
+            margin = 100
+
+            // initial data
+            data = [
+                { category: "Medications" , "risk": 6, "weight": 2 },
+                { category: "Falls", "risk": 4, "weight": 1 },
+                { category: "Functional Limitations", "risk": 2, "weight": 2 },
+                { category: "Social Barriers", "risk": 1, "weight": 3 },
+                { category: "Mental Health", "risk": 2, "weight": 1 },
+                { category: "Utilization", "risk": 5, "weight": 1 },
+                { category: "Admissions", "risk": 5, "weight": 2 },2
+                { category: "Chronic Conditions", "risk": 3, "weight": 3 }
+            ]
+
+            // get categories
+            categories = _(data).pluck("category")
+
+            // build ordinal scale to find angle
+            angleScale = d3.scale.ordinal().domain(_(data).pluck("category")).rangeBands([0,2*Math.PI])
+
+            // add SVG element
+            svg = d3.select("body").append("svg").attr("width", chartWidth).attr("height", chartHeight)
+
+            // create a scale for the size of this chart
+            size = d3.scale.linear().domain([0,100]).range([0,d3.min([chartHeight, chartWidth])/2-2*margin])
+
+            // create clip path element
+            clip = svg
+                .append("defs")
+                .append("clipPath").attr("id", "clip-url");
+
+            // create outter circle
+            outer_circle = svg.append("circle")
+                .attr("cx", 0)
+                .attr("cy", 0)
+                .attr("r", 200)
+                .attr("transform", "translate("+chartWidth/2+","+chartHeight/2+")")
+                .attr("clip-path", "url(#clip-url)")
+                .style("fill", '#f00');
+
+            // create star
+            clip.append("path")
+                .classed("star", true)
+                .attr("transform", "translate("+chartWidth/2+","+chartHeight/2+")")
+
+
+            function redraw(data){
+                risk = d3.svg.line.radial()
+                    .angle(function(d){ return angleScale(d.category) })
+                    .radius(function(d){ return size(d.risk) })
+                clip.select("path.star")
+                    .datum(data)
+                    .transition()
+                    .attr("d", risk)
+            }
+
+            redraw(data)
+            window.setInterval(update, 2000)
+
+            function update(){
+                data = [
+                    { category: "Medications" , "risk": 20+60*Math.random(), "weight": 20+60*Math.random() },
+                    { category: "Falls", "risk": 20+60*Math.random(), "weight": 20+60*Math.random() },
+                    { category: "Functional Limitations", "risk": 20+60*Math.random(), "weight": 20+60*Math.random() },
+                    { category: "Social Barriers", "risk": 20+60*Math.random(), "weight": 20+60*Math.random() },
+                    { category: "Mental Health", "risk": 20+60*Math.random(), "weight": 20+60*Math.random() },
+                    { category: "Utilization", "risk": 20+60*Math.random(), "weight": 20+60*Math.random() },
+                    { category: "Admissions", "risk": 20+60*Math.random(), "weight": 20+60*Math.random() },
+                    { category: "Chronic Conditions", "risk": 20+60*Math.random() }
+                ]
+                redraw(data)
+            }
+
+            // display category names
+            // for(val in data){
+            //     svg.append("text").text(data[val].category)
+            //         .attr("x", chartWidth/2 + size(105))
+            //         .attr("y", chartHeight/2)
+            //         .attr("transform", "rotate("+180*angleScale(data[val].category)/Math.PI+", " + (chartWidth/2) + ", " + chartHeight/2 +")");
+            // }
+        </script>
+
+        <!-- ###################################      PIE CHARTS FOR SKETCH      ################################### -->
+
+        <div id="pieChart"></div>
+
+        <script>
+            var pie = new d3pie("pieChart", {
+                "header": {
+                    "title": {
+                        "fontSize": 24,
+                        "font": "open sans"
+                    },
+                    "subtitle": {
+                        "color": "#999999",
+                        "fontSize": 12,
+                        "font": "open sans"
+                    },
+                    "titleSubtitlePadding": 9
+                },
+                "footer": {
+                    "color": "#999999",
+                    "fontSize": 10,
+                    "font": "open sans",
+                    "location": "bottom-left"
+                },
+                "size": {
+                    "canvasHeight": 600,
+                    "canvasWidth": 600,
+                    "pieInnerRadius": "80%",
+                    "pieOuterRadius": "86%"
+                },
+                "data": {
+                    "content": [
+                        {
+                            "label": "Medications",
+                            "value": 2,
+                            "color": "#00047c"
+                        },
+                        {
+                            "label": "Falls",
+                            "value": 1,
+                            "color": "#2f3399"
+                        },
+                        {
+                            "label": "Functional Limitations",
+                            "value": 2,
+                            "color": "#2f52aa"
+                        },
+                        {
+                            "label": "Social Barriers",
+                            "value": 3,
+                            "color": "#2e58c9"
+                        },
+                        {
+                            "label": "Mental Health",
+                            "value": 1,
+                            "color": "#4d6fcc"
+                        },
+                        {
+                            "label": "Utilization",
+                            "value": 1,
+                            "color": "#738def"
+                        },
+                        {
+                            "label": "Admissions",
+                            "value": 2,
+                            "color": "#779fdd"
+                        },
+                        {
+                            "label": "Chronic Conditions",
+                            "value": 3,
+                            "color": "#9db5f2"
+                        }
+                    ]
+                },
+                "labels": {
+                    "outer": {
+                        "format": "none",
+                        "pieDistance": 32
+                    },
+                    "inner": {
+                        "format": "none",
+                        "hideWhenLessThanPercentage": 3
+                    },
+                    "mainLabel": {
+                        "fontSize": 11
+                    },
+                    "percentage": {
+                        "color": "#ffffff",
+                        "decimalPlaces": 0
+                    },
+                    "value": {
+                        "color": "#adadad",
+                        "fontSize": 11
+                    },
+                    "lines": {
+                        "enabled": true
+                    }
+                },
+                "tooltips": {
+                    "enabled": true,
+                    "type": "placeholder",
+                    "string": "{label}: {value}, {percentage}%",
+                    "styles": {
+                        "fontSize": 16
+                    }
+                },
+                "effects": {
+                    "pullOutSegmentOnClick": {
+                        "effect": "linear",
+                        "speed": 400,
+                        "size": 15
+                    }
+                },
+                "callbacks": {}
+            });
+            </script>
+
+        <script>
+        //     var pie = new d3pie("pieChart", {
+        //         "header": {
+        //             "title": {
+        //                 "fontSize": 24,
+        //                 "font": "helvetica"
+        //             },
+        //             "subtitle": {
+        //                 "color": "#999999",
+        //                 "fontSize": 12,
+        //                 "font": "helvetica"
+        //             },
+        //             "titleSubtitlePadding": 9
+        //         },
+        //         "footer": {
+        //             "color": "#999999",
+        //             "fontSize": 10,
+        //             "font": "open sans",
+        //             "location": "bottom-left"
+        //         },
+        //         "size": {
+        //             "canvasHeight": 200,
+        //             "canvasWidth": 250,
+        //             "pieInnerRadius": "86%",
+        //             "pieOuterRadius": "90%"
+        //         },
+        //         "data": {
+        //             "content": [
+        //                 {
+        //                     "label": "Value",
+        //                     "value": 24,
+        //                     "color": "#407dae"
+        //                 },
+        //                 {
+        //                     "label": "Total - Value",
+        //                     "value": 582,
+        //                     "color": "#dfdfdf"
+        //                 }
+        //             ]
+        //         },
+        //         "labels": {
+        //             "outer": {
+        //                 "format": "none",
+        //                 "hideWhenLessThanPercentage": 1,
+        //                 "pieDistance": 32
+        //             },
+        //             "inner": {
+        //                 "format": "none",
+        //                 "hideWhenLessThanPercentage": 3
+        //             },
+        //             "mainLabel": {
+        //                 "fontSize": 11
+        //             },
+        //             "percentage": {
+        //                 "color": "#ffffff",
+        //                 "decimalPlaces": 0
+        //             },
+        //             "value": {
+        //                 "color": "#adadad",
+        //                 "fontSize": 11
+        //             },
+        //             "lines": {
+        //                 "enabled": true
+        //             }
+        //         },
+        //         "effects": {
+        //             "pullOutSegmentOnClick": {
+        //                 "effect": "none",
+        //                 "speed": 400,
+        //                 "size": 8
+        //             },
+        //             "highlightSegmentOnMouseover": false,
+        //             "highlightLuminosity": 0.39
+        //         }
+        //     });
+        </script>
+
+
+        <!-- ###################################      STYLES      ################################### -->
+
+
+        <style media="screen">
+            body {
+                /*background-color: #eee;*/
+            }
+
+            .star {
+                fill: #000;
+                stroke: #0f0;
+                opacity: .6
+            }
+
+            .danger {
+                fill: #333;
+                stroke: none;
+                opacity: .30;
+            }
+
+            .outline{
+                fill: #ccc;
+                opacity: .1;
+                stroke: black;
+            }
+        </style>
+
+
+<!--         <svg height="150" width="500">
+            <defs>
+                <radialGradient id="grad1" cx="50%" cy="50%" r="80%" fx="50%" fy="50%">
+                    <stop offset="0" style="stop-color:rgb(255,255,255); stop-opacity:0" />
+                    <stop offset="100" style="stop-color:rgb(0,0,255);stop-opacity:1" />
+                </radialGradient>
+            </defs>
+        </svg> -->
+
+
+
+    </body>
+</html>
+

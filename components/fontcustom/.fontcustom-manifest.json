@@ -1,0 +1,48 @@
+{
+  "checksum": {
+    "previous": "e0323cbb51b167777b19c8960b8ea6cb917b53107522bc7bfd81b69156c9e636",
+    "current": "e0323cbb51b167777b19c8960b8ea6cb917b53107522bc7bfd81b69156c9e636"
+  },
+  "fonts": [
+    "../../../ember/ember-on-fhir/app/styles/fonts/fontcustom_e0323cbb51b167777b19c8960b8ea6cb.ttf",
+    "../../../ember/ember-on-fhir/app/styles/fonts/fontcustom_e0323cbb51b167777b19c8960b8ea6cb.svg",
+    "../../../ember/ember-on-fhir/app/styles/fonts/fontcustom_e0323cbb51b167777b19c8960b8ea6cb.woff",
+    "../../../ember/ember-on-fhir/app/styles/fonts/fontcustom_e0323cbb51b167777b19c8960b8ea6cb.eot"
+  ],
+  "glyphs": {
+    "med-clipboard": {
+      "codepoint": 61696,
+      "source": "vectors/med-clipboard.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": "fontcustom.yml",
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "fontcustom",
+    "force": false,
+    "input": {
+      "templates": "vectors",
+      "vectors": "vectors"
+    },
+    "no_hash": false,
+    "output": {
+      "css": "../../../ember/ember-on-fhir/app/styles",
+      "fonts": "../../../ember/ember-on-fhir/app/styles/fonts",
+      "preview": "../../../ember/ember-on-fhir/app/styles/fonts"
+    },
+    "preprocessor_path": "",
+    "quiet": false,
+    "templates": [
+      "scss"
+    ]
+  },
+  "templates": [
+    "../../../ember/ember-on-fhir/app/styles/_fontcustom.scss"
+  ]
+}
