@@ -1,18 +1,34 @@
 {
   "checksum": {
-    "previous": "e0323cbb51b167777b19c8960b8ea6cb917b53107522bc7bfd81b69156c9e636",
-    "current": "e0323cbb51b167777b19c8960b8ea6cb917b53107522bc7bfd81b69156c9e636"
+    "previous": "7fa28091e0b5346f5771f52a59cc1dd03de9b7f918035679e6a054e7b36179f5",
+    "current": "7fa28091e0b5346f5771f52a59cc1dd03de9b7f918035679e6a054e7b36179f5"
   },
   "fonts": [
-    "../../../ember/ember-on-fhir/app/styles/fonts/fontcustom_e0323cbb51b167777b19c8960b8ea6cb.ttf",
-    "../../../ember/ember-on-fhir/app/styles/fonts/fontcustom_e0323cbb51b167777b19c8960b8ea6cb.svg",
-    "../../../ember/ember-on-fhir/app/styles/fonts/fontcustom_e0323cbb51b167777b19c8960b8ea6cb.woff",
-    "../../../ember/ember-on-fhir/app/styles/fonts/fontcustom_e0323cbb51b167777b19c8960b8ea6cb.eot"
+    "../../../ember/ember-on-fhir/app/styles/fonts/fontcustom_7fa28091e0b5346f5771f52a59cc1dd0.ttf",
+    "../../../ember/ember-on-fhir/app/styles/fonts/fontcustom_7fa28091e0b5346f5771f52a59cc1dd0.svg",
+    "../../../ember/ember-on-fhir/app/styles/fonts/fontcustom_7fa28091e0b5346f5771f52a59cc1dd0.woff",
+    "../../../ember/ember-on-fhir/app/styles/fonts/fontcustom_7fa28091e0b5346f5771f52a59cc1dd0.eot"
   ],
   "glyphs": {
+    "add-intervention": {
+      "codepoint": 61697,
+      "source": "vectors/add-intervention.svg"
+    },
+    "caregiver": {
+      "codepoint": 61698,
+      "source": "vectors/caregiver.svg"
+    },
     "med-clipboard": {
       "codepoint": 61696,
       "source": "vectors/med-clipboard.svg"
+    },
+    "medication": {
+      "codepoint": 61699,
+      "source": "vectors/medication.svg"
+    },
+    "running": {
+      "codepoint": 61700,
+      "source": "vectors/running.svg"
     }
   },
   "options": {
